@@ -1,0 +1,152 @@
+@import "colors";
+
+@mixin title {
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 700;
+}
+
+@mixin menu-link {
+  text-decoration: none;
+  cursor: pointer;
+  color: $color-service--light;
+
+  &--active {
+    color: $color-main;
+  }
+
+  &:hover,
+  &:focus {
+    transition: 0.3s ease;
+    color: $color-main--dark;
+  }
+}
+
+@mixin flex-row-center {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  justify-content: center;
+  align-content: center;
+
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 600;
+}
+
+@mixin button {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+
+  letter-spacing: 0.12em;
+
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 600;
+  padding: 0 18px;
+
+  min-height: 52px;
+  max-width: max-content;
+
+  background-color: $color-main;
+  color: $color-background;
+  border: none;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    background-color: $color-main--dark;
+    transition: 0.3s ease;
+  }
+}
+
+@mixin button-outline {
+  @include button;
+
+  background-color: $color-background;
+  color: $color-main;
+  border: 1px $color-main solid;
+
+  &:hover,
+  &:focus {
+    color: $color-background;
+    background-color: $color-main;
+  }
+}
+
+@mixin tab {
+  @include button-outline;
+
+  font-size: 20px;
+  line-height: 27px;
+  font-weight: 400;
+
+  min-height: 50px;
+  min-width: 194px;
+
+  letter-spacing: normal;
+
+  background-color: $color-background;
+  color: $color-service--light;
+  border: 1px $color-service--lighten solid;
+  text-transform: none;
+
+  &:hover,
+  &:focus {
+    color: $color-background;
+    background-color: $color-main--dark;
+    border: 1px $color-main--dark solid;
+  }
+
+  &--active {
+    color: $color-background;
+    background-color: $color-main;
+    border: 1px $color-main solid;
+  }
+}
+
+@mixin mandatory {
+  position: absolute;
+  content: '*';
+  left: 10px;
+  top: 10px;
+  z-index: 60;
+
+  width: 12px;
+  height: 12px;
+  color: $color-main;
+}
+
+@mixin error-message {
+  position: absolute;
+  left: 0;
+  top: -19px;
+  z-index: 60;
+
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 400;
+  color: $color-main;
+}
+
+@mixin input-field {
+  display: block;
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 400;
+
+  width: 300px;
+  padding: 15px 25px;
+  border: 1px $color-service--lighten solid;
+
+  &:focus,
+  &:hover {
+    border-color: $color-service--dark;
+  }
+}

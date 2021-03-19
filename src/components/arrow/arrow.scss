@@ -1,0 +1,26 @@
+@import "../../scss/colors";
+
+.arrow {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  height: 52px;
+  width: 52px;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    opacity: .6;
+    transition: 0.2s ease;
+    box-shadow: $color-main 0 0 6px 1px;
+  }
+
+  &[disabled] {
+    opacity: .4;
+    cursor: not-allowed;
+  }
+}

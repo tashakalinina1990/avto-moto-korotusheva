@@ -1,0 +1,27 @@
+@import "../../scss/colors";
+@import "../../scss/const-width";
+
+.menu {
+  @include flex-row-center;
+  justify-content: flex-end;
+
+  max-width: 935px;
+  min-width: 135px;
+}
+
+.menu__item {
+  padding: 10px 2px;
+  margin-left: 64px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  @media (max-width: $tablet-width-only) {
+    margin-left: 14px;
+  }
+}
+
+.menu__link {
+  @include menu-link;
+}

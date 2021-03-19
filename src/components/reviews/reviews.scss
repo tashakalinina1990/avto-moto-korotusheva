@@ -1,0 +1,14 @@
+@import "../../scss/colors";
+@import "../../scss/const-width";
+
+.reviews {
+  position: relative;
+}
+
+.reviews__btn {
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}

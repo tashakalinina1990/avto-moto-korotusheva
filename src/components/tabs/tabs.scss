@@ -1,0 +1,20 @@
+@import "../../scss/const-width";
+
+.tabs {
+  padding: 0 5px;
+  margin-bottom: 40px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 140px;
+  }
+}
+
+.tabs__wrapper {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+
+  @media (max-width: $mobile-width-only) {
+    overflow: auto;
+  }
+}

@@ -1,0 +1,52 @@
+@import "../../scss/colors";
+@import "../../scss/const-width";
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.contact__map {
+  flex-grow: 1;
+  margin: 15px;
+
+  @media (max-width: $mobile-width-only) {
+    margin: auto;
+  }
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  max-width: 330px;
+  padding-right: 50px;
+}
+
+.contact-list__item {
+  display: flex;
+  flex-direction: column;
+
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 600;
+  color: $color-service;
+
+  padding-top: 16px;
+  padding-bottom: 10px;
+}
+
+.contact-list__title {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 700;
+  display: block;
+  padding-bottom: 8px;
+}
+
+.contact-list__email,
+.contact-list__tel {
+  text-decoration: none;
+  color: $color-service--dark;
+}

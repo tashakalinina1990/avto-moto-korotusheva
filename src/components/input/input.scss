@@ -1,0 +1,21 @@
+@import "../../scss/colors";
+
+.input {
+  position: relative;
+
+  &--error .input__block {
+    border-color: $color-error;
+  }
+
+  &--mandatory::before {
+    @include mandatory;
+  }
+}
+
+.input__block {
+  @include input-field;
+}
+
+.input__error {
+  @include error-message;
+}

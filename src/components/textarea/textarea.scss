@@ -1,0 +1,24 @@
+@import "../../scss/colors";
+
+.textarea {
+  position: relative;
+
+  &--error .textarea__block {
+    border-color: $color-error;
+  }
+
+  &--mandatory::before {
+    @include mandatory;
+  }
+}
+
+.textarea__block {
+  @include input-field;
+  height: 114px;
+  min-height: 51px;
+  resize: vertical;
+}
+
+.textarea__error {
+  @include error-message;
+}

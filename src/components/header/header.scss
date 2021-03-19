@@ -1,0 +1,11 @@
+@import "../../scss/colors";
+@import "../../scss/const-width";
+
+.header {
+  background-color: $color-background--dark;
+  margin-bottom: 20px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 76px;
+  }
+}

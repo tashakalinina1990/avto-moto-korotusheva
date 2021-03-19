@@ -1,0 +1,15 @@
+@import "../../scss/colors";
+
+.button {
+  @include button;
+
+  &[disabled] {
+    background-color: $color-service--light;
+    color: $color-service--lighten;
+    cursor: not-allowed;
+  }
+
+  &--outline {
+    @include button-outline;
+  }
+}

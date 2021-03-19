@@ -1,0 +1,79 @@
+@import "../../scss/colors";
+@import "../../scss/const-width";
+
+.description {
+  padding: 0 20px;
+}
+
+.description__info {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  margin-bottom: 39px;
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
+
+.description__title {
+  @include title;
+}
+
+.description__wrapper {
+  display: inline-block;
+  padding: 0 5px;
+
+  @media (min-width: $desktop-width) {
+    padding: 0 55px;
+  }
+}
+
+.description__slider {
+  @media (max-width: $tablet-width-only) {
+    align-self: center;
+  }
+}
+
+.description__icons {
+  margin-bottom: 20px;
+}
+
+.description__price {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 39px;
+}
+
+.description__new-price {
+  font-size: 35px;
+  line-height: 47px;
+  font-weight: 700;
+  margin-right: 34px;
+}
+
+.description__old-price {
+  align-self: center;
+  position: relative;
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: 400;
+  opacity: .5;
+
+  &::before {
+    content: "";
+    bottom: 50%;
+    border-bottom: 1px solid $color-service--light;
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    transform: rotate(-12deg);
+  }
+}
+
+.description__btn {
+  margin-bottom: 16px;
+}
